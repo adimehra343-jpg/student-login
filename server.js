@@ -11,6 +11,13 @@ const app = express();
 connectDB();
 
 app.use(cors());
+
+app.use((req, res, next) => {
+    console.log("BODY:", req.body);
+    next();
+});
+
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
