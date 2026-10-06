@@ -1,4 +1,3 @@
-
 const express = require("express");
 
 const router = express.Router();
@@ -12,4 +11,3 @@ router.post("/verify-email", authController.verifyEmail);
 router.post("/login", authController.login);
 
 module.exports = router;
-
